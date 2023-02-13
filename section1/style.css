@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(27, 27, 27);
+    color: rgb(235, 235, 235);
+}
+
+.conditions {
+    display: grid;
+    place-items:  center;
+    align-content: center;
+    height: 25vh;
+    margin: 0;
+    font-family: sans-serif;
+    border: 1px solid lime;
+}
+
+.arrays {
+    border: 1px dotted orangered;
+}
+
+.list {
+    margin: 1rem 0;
+}
+
+.assoc-arrays {
+    border: 3px dashed hotpink;
+    padding: 2rem;
+}
+
+.lambda-funcs {
+    border: 1px double powderblue;
+}
