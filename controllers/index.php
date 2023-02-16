@@ -4,6 +4,6 @@
 
     require('views/index.view.php');
 
-    echo $_SERVER['REQUEST_URI'];
+    dd($_SERVER['REQUEST_URI']);
 
 ?>

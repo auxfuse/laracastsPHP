@@ -9,8 +9,8 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="/laracastsPHP/" class="<?= urlIs('/laracastsPHP/') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
-                        <a href="/laracastsPHP/about" class="<?= urlIs('/laracastsPHP/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About</a>
-                        <a href="/laracastsPHP/contact" class="<?= urlIs('/laracastsPHP/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Contact</a>
+                        <a href="/about" class="<?= urlIs('/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About</a>
+                        <a href="/contact" class="<?= urlIs('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Contact</a>
                     </div>
                 </div>
             </div>
@@ -82,8 +82,8 @@
         <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="/laracastsPHP/" class="<?= urlIs('/laracastsPHP/') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
-            <a href="/laracastsPHP/about" class="<?= urlIs('/laracastsPHP/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">About</a>
-            <a href="/laracastsPHP/contact" class="<?= urlIs('/laracastsPHP/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Contact</a>
+            <a href="/about" class="<?= urlIs('/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">About</a>
+            <a href="/contact" class="<?= urlIs('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ; ?> hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Contact</a>
         </div>
         <div class="border-t border-gray-700 pt-4 pb-3">
             <div class="flex items-center px-5">

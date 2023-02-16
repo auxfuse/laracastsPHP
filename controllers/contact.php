@@ -2,8 +2,8 @@
 
     $heading = 'Contact 📱';
 
-    require('contact.view.php');
+    require('views/contact.view.php');
 
-    echo $_SERVER['REQUEST_URI'];
+    dd($_SERVER['REQUEST_URI']);
 
 ?>

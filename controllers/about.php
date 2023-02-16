@@ -2,8 +2,8 @@
 
     $heading = 'About ➡️';
 
-    require('../../laracastsPHP/views/about.view.php');
+    require('views/about.view.php');
 
-    echo $_SERVER['REQUEST_URI'];
+    dd($_SERVER['REQUEST_URI']);
 
 ?>
