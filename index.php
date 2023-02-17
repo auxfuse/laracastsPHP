@@ -2,20 +2,15 @@
 
     require('functions.php');
 
+    require('Database.php');
+
     // require('router.php');
 
-    // connect to db
-    $dsn = "mysql:host=localhost;port=3306;dbname=laracastsPHP;charset=utf8mb4";
-    
-    $pdo = new PDO($dsn, 'root');
+    $config = require('config.php');
 
-    $statement = $pdo->prepare("SELECT * FROM `posts`");
+    $db = new Database($config['database']);
 
-    $statement->execute();
-
-    $posts = $statement->fetchAll(
-        PDO::FETCH_ASSOC
-    );
+    $posts = $db->query("SELECT * FROM `posts`")->fetchAll();
 
     foreach ($posts as $post) {
         echo "<li>" . $post['title'] . "</li>";
