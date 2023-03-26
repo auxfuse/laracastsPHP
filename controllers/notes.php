@@ -8,7 +8,7 @@
 
     $notes = $db->query(
         'select * from notes where user_id = 3'
-    )->fetchAll();
+    )->get();
 
     require('views/notes.view.php');
 

@@ -27,4 +27,10 @@
         die();
     }
 
+    function authorise($condition, $status = Response::FORBIDDEN) {
+        if(! $condition) {
+            abort($status);
+        }
+    }
+
 ?>
