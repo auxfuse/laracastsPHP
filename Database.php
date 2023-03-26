@@ -13,11 +13,11 @@
             ]);
         }
 
-        public function query($q) {
+        public function query($q, $params = []) {
         
             $statement = $this->connection->prepare($q);
         
-            $statement->execute();
+            $statement->execute($params);
 
             return $statement;
         }
