@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html class="h-full bg-gray-100" lang="en">
 
-<?php require('partials/_head.php'); ?>
+<?php require(__DIR__ . '/../partials/_head.php'); ?>
 
 <body class="h-full">
     <div class="min-h-full">
-        <?php require('partials/_nav.php'); ?>
+        <?php require(__DIR__ . '/../partials/_nav.php'); ?>
         
-        <?php require('partials/_header.php'); ?>
+        <?php require(__DIR__ . '/../partials/_header.php'); ?>
 
         <a href="/notes" class="text-blue-500 hover:underline ml-8">See all Notes</a>
 

@@ -26,10 +26,11 @@
                     'user_id' => 3
                 ]
             );
+            header("Location: /notes");
         }
 
     }
 
-    require('views/note-create.view.php');
+    require('views/notes/create.view.php');
 
 ?>
