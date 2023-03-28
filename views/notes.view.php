@@ -13,11 +13,16 @@
                 <!-- Replace with your content -->
                 <div class="px-4 py-6 sm:px-0">
                     <div class="h-96 rounded-lg border-4 border-dashed border-gray-200">
-                        <?php foreach ($notes as $note) : ?>
-                            <li>
-                                <a href="/note?id=<?= $note['id'] ?>" class="text-blue-500 hover:underline"><?= $note['body'] ?></a>
-                            </li>
-                        <?php endforeach; ?>
+                        <ul class="ms-6 mt-4">
+                            <?php foreach ($notes as $note) : ?>
+                                <li>
+                                    <a href="/note?id=<?= $note['id'] ?>" class="text-blue-500 hover:underline"><?= htmlspecialchars($note['body']) ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                    <div class="ms-6 mt-6">
+                        <a href="/notes/create" class="text-blue-500 hover:underline">Create Note -></a>
                     </div>
                 </div>
                 <!-- /End replace -->
