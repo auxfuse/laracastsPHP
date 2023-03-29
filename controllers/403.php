@@ -1,8 +1,8 @@
 <?php
 
-    $heading = 'Error 🔔';
-
-    require('views/403.view.php');
+    view("403.view.php", [
+        'heading' => 'Error 🔔',
+    ]);
 
     dd($_SERVER['REQUEST_URI']);
 

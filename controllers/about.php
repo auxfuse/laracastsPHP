@@ -1,8 +1,8 @@
 <?php
 
-    $heading = 'About ➡️';
-
-    require('views/about.view.php');
+    view("about.view.php", [
+        'heading' => 'About ➡',
+    ]);
 
     dd($_SERVER['REQUEST_URI']);
 

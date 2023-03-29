@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html class="h-full bg-gray-100" lang="en">
 
-<?php require('views/partials/_head.php'); ?>
+<?php require(base_path('views/partials/_head.php')); ?>
 
 <body class="h-full">
     <div class="min-h-full">
-        <?php require('views/partials/_nav.php'); ?>
+        <?php require(base_path('views/partials/_nav.php')); ?>
         
-        <?php require('views/partials/_header.php'); ?>
+        <?php require(base_path('views/partials/_header.php')); ?>
 
         <main>
 
