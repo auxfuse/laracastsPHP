@@ -1,5 +1,9 @@
 <?php
 
+    namespace Core;
+
+    use Core\Response;
+
     function dd($value) {
         echo '<pre>';
         var_dump($value);
@@ -14,7 +18,7 @@
 
     function routeToController($uri, $routes) {
         if (array_key_exists($uri, $routes)) {
-            require($routes[$uri]);
+            require(base_path($routes[$uri]));
         } else {
             abort();
         }
@@ -23,7 +27,7 @@
     function abort($code = 404) {
         http_response_code($code);
 
-        require("controllers/{$code}.php");
+        require(base_path("controllers/{$code}.php"));
         die();
     }
 

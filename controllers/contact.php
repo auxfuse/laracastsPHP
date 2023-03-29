@@ -1,9 +1,9 @@
 <?php
 
-    view("contact.view.php", [
+    Core\view("contact.view.php", [
         'heading' => 'Contact 📱',
     ]);
 
-    dd($_SERVER['REQUEST_URI']);
+    Core\dd($_SERVER['REQUEST_URI']);
 
 ?>

@@ -1,9 +1,9 @@
 <?php
 
-    view("about.view.php", [
+    Core\view("about.view.php", [
         'heading' => 'About ➡',
     ]);
 
-    dd($_SERVER['REQUEST_URI']);
+    Core\dd($_SERVER['REQUEST_URI']);
 
 ?>

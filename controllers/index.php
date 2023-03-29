@@ -1,9 +1,9 @@
 <?php
 
-    view("index.view.php", [
+    Core\view("index.view.php", [
         'heading' => 'Home 🏠',
     ]);
 
-    dd($_SERVER['REQUEST_URI']);
+    Core\dd($_SERVER['REQUEST_URI']);
 
 ?>
