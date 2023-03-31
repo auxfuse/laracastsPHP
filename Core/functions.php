@@ -1,7 +1,5 @@
 <?php
 
-    namespace Core;
-
     use Core\Response;
 
     function dd($value) {
@@ -14,14 +12,6 @@
 
     function urlIs($value) {
         return $_SERVER['REQUEST_URI'] === $value;
-    }
-
-    function routeToController($uri, $routes) {
-        if (array_key_exists($uri, $routes)) {
-            require(base_path($routes[$uri]));
-        } else {
-            abort();
-        }
     }
 
     function abort($code = 404) {

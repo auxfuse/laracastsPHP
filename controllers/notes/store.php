@@ -3,7 +3,7 @@
     use Core\Validator;
     use Core\Database;
 
-    $config = require(Core\base_path('config.php'));
+    $config = require(base_path('config.php'));
     $db = new Database($config['database']);
 
     $errors = [];
@@ -13,7 +13,7 @@
     }
 
     if (! empty($errors)) {
-        return Core\view("notes/create.view.php", [
+        return view("notes/create.view.php", [
             'heading' => 'Create Note',
             'errors' => $errors
         ]);
