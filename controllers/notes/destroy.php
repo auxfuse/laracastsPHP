@@ -2,7 +2,7 @@
 
     use Core\Database;
 
-    $config = require(Core\base_path('config.php'));
+    $config = require(base_path('config.php'));
     $db = new Database($config['database']);
 
     $currentUserId = 3;
@@ -11,7 +11,7 @@
         'select * from notes where id = :id', ['id' => $_POST['id']
     ])->findOrFail();
 
-    Core\authorise($note['user_id'] === $currentUserId);
+    authorise($note['user_id'] === $currentUserId);
 
     $db->query(
         'delete from notes where id = :id', ['id' => $_POST['id']]
