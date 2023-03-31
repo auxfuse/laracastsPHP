@@ -20,6 +20,7 @@
                     </div>
                 </div>
                 <form method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="id" value="<?= $note['id'] ?>">
                     <button type="submit" class="text-small text-red-500">Delete</button>
                 </form>

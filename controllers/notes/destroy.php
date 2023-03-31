@@ -8,14 +8,16 @@
     $currentUserId = 3;
 
     $note = $db->query(
-        'select * from notes where id = :id', ['id' => $_GET['id']]
-    )->findOrFail();
+        'select * from notes where id = :id', ['id' => $_POST['id']
+    ])->findOrFail();
 
     Core\authorise($note['user_id'] === $currentUserId);
 
-    Core\view("notes/show.view.php", [
-        'heading' => 'The Note 📝📝',
-        'note' => $note
-    ]);
+    $db->query(
+        'delete from notes where id = :id', ['id' => $_POST['id']]
+    );
+
+    header("Location: /notes");
+    exit();
 
 ?>

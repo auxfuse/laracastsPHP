@@ -2,25 +2,48 @@
 
     namespace Core;
 
-    $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+    class Router {
 
-    // if ($uri === "/laracastsPHP/") {
-    //     require('controllers/index.php');
-    // } else if ($uri === '/about') {
-    //     require('controllers/about.php');
-    // } else if ($uri === '/contact') {
-    //     require('controllers/contact.php');
-    // }
+        protected $routes = [];
 
-    $routes = [
-        '/' => 'controllers/index.php',
-        '/about' => 'controllers/about.php',
-        '/notes' => 'controllers/notes/index.php',
-        '/note' => 'controllers/notes/show.php',
-        '/notes/create' => 'controllers/notes/create.php',
-        '/contact' => 'controllers/contact.php',
-    ];
+        public function add($method, $uri, $controller) {
+            $this->routes[] = [
+                'uri' => $uri,
+                'controller' => $controller,
+                'method' => $method
+            ];
+        }
 
-    routeToController($uri, $routes);
+        public function get($uri, $controller) {
+            $this->add('GET', $uri, $controller);
+        }
+
+        public function post($uri, $controller) {
+            $this->add('POST', $uri, $controller);
+        }
+
+        public function delete($uri, $controller) {
+            $this->add('DELETE', $uri, $controller);
+        }
+
+        public function patch($uri, $controller) {
+            $this->add('PATH', $uri, $controller);
+        }
+
+        public function put($uri, $controller) {
+            $this->add('PUT', $uri, $controller);
+        }
+
+        public function route($uri, $method) {
+            foreach ($this->routes as $route) {
+                if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
+                    return require(base_path($route['controller']));
+                }
+            }
+
+            abort();
+        }
+
+    }
 
 ?>
